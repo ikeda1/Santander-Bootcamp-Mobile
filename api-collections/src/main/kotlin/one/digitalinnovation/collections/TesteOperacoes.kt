@@ -30,3 +30,4 @@ fun main() {
     println(salarios.any {it == 1000.0})
     println(salarios.any {it == 50.0})
 }
+
