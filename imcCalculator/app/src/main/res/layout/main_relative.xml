@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="40dp"
+        android:text="IMC"
+        android:textColor="@color/purple_500"
+        android:textSize="64sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/weight"
+        style="@style/inputNum"
+        android:layout_below="@id/titleTxt"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_edge_edit_text"
+        android:hint="@string/weightHint"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/height"
+        style="@style/inputNum"
+        android:layout_marginHorizontal="24dp"
+        android:layout_below="@id/weight"
+        android:background="@drawable/rounded_edge_edit_text"
+        android:hint="@string/heightHint"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#7f5BD0"
+        android:padding="20dp"
+        android:text="@string/calcButton"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        tools:visibility="gone"
+        android:id="@+id/resultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Resultado"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:visibility="invisible" />
+</RelativeLayout>
