@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AgendaBootcamp</string>
+    <string name="set_event_txt">Set Event</string>
 </resources>
