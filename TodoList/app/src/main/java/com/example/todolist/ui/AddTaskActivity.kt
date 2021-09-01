@@ -4,6 +4,8 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.example.todolist.R
 import com.example.todolist.databinding.ActivityAddTaskBinding
 import com.example.todolist.datasource.TaskDataSource
 import com.example.todolist.extensions.format
@@ -20,10 +22,8 @@ class AddTaskActivity: AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         if (intent.hasExtra(TASK_ID)) {
             val taskId = intent.getIntExtra(TASK_ID, 0)
             TaskDataSource.findById(taskId)?.let {
@@ -32,6 +32,10 @@ class AddTaskActivity: AppCompatActivity(){
                 binding.tilDate.text = it.date
                 binding.tilTime.text = it.hour
             }
+
+            val toolbar = findViewById<Toolbar>(R.id.toolbar)
+            setSupportActionBar(toolbar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
 
         insertListeners()

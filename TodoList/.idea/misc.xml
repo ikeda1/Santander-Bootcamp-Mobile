@@ -5,10 +5,11 @@
       <map>
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/drawable/ic_grupo_11.xml" value="0.5463541666666667" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5463541666666667" />
-        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/activity_add_task.xml" value="0.20433905146316853" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/activity_add_task.xml" value="0.1" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/activity_main.xml" value="0.5260416666666666" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/empty_state.xml" value="0.5260416666666666" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/item_task.xml" value="0.20433905146316853" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/menu/popup_menu.xml" value="0.5260416666666666" />
       </map>
     </option>
