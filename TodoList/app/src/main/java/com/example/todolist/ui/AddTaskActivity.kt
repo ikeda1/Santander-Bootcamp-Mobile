@@ -32,11 +32,11 @@ class AddTaskActivity: AppCompatActivity(){
                 binding.tilDate.text = it.date
                 binding.tilTime.text = it.hour
             }
-
-            val toolbar = findViewById<Toolbar>(R.id.toolbar)
-            setSupportActionBar(toolbar)
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         insertListeners()
     }

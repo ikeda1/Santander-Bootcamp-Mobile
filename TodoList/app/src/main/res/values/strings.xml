@@ -13,5 +13,5 @@
     <string name="label_edit">Editar</string>
     <string name="label_delete">Deletar</string>
     <string name="label_deleteAll">Deletar Tudo</string>
-    <string name="label_noTasks">Ops! Você ainda não possui\nnenhuma tarefa</string>
+    <string name="label_noTasks">Você ainda não possui\nnenhuma tarefa</string>
 </resources>

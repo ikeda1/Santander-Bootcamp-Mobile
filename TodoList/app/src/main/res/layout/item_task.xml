@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,11 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintStart_toStartOf="@id/tv_title"
         tools:text="08/31/2021 18:00"/>
-    
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_options"
         android:layout_width="36dp"
@@ -34,6 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_more_vertical" />
+        app:srcCompat="@drawable/ic_more_vertical"
+        android:tint="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
