@@ -1,5 +1,6 @@
 package com.example.todolist.ui
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.PopupMenu
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.R
 import com.example.todolist.databinding.ItemTaskBinding
 import com.example.todolist.model.Task
+import java.lang.reflect.Method
 
 
 class TaskListAdapter: ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
@@ -47,6 +49,31 @@ class TaskListAdapter: ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCal
                 }
                 return@setOnMenuItemClickListener true
             }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                popupMenu.setForceShowIcon(true)
+            }else{
+                try {
+                    val fields = popupMenu.javaClass.declaredFields
+                    for (field in fields) {
+                        if ("mPopup" == field.name) {
+                            field.isAccessible = true
+                            val menuPopupHelper = field[popupMenu]
+                            val classPopupHelper =
+                                Class.forName(menuPopupHelper.javaClass.name)
+                            val setForceIcons: Method = classPopupHelper.getMethod(
+                                "setForceShowIcon",
+                                Boolean::class.javaPrimitiveType
+                            )
+                            setForceIcons.invoke(menuPopupHelper, true)
+                            break
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
             popupMenu.show()
         }
     }
