@@ -8,10 +8,24 @@
     <string name="label_date_hint">Data</string>
     <string name="label_hour_hint">Hora</string>
     <string name="label_cancel">Cancelar</string>
-    <string name="label_tasks">Tarefas</string>
+    <string name="label_tasks">Lista de Tarefas</string>
     <string name="label_description_new_task">Nova Tarefa</string>
     <string name="label_edit">Editar</string>
     <string name="label_delete">Deletar</string>
     <string name="label_deleteAll">Deletar Tudo</string>
     <string name="label_noTasks">Você ainda não possui\nnenhuma tarefa</string>
+    <string name="label_task_added">Tarefa Adicionada</string>
+    <string name="label_title_missing">Coloque um título na sua tarefa!</string>
+    <string name="label_update_task_title">Atualizar Tarefa</string>
+    <string name="label_update_task_btn">Atualizar Tarefa</string>
+    <string name="label_task_updated">Tarefa Atualizada</string>
+    <string name="label_no_tasks">Não há nenhuma tarefa</string>
+    <string name="label_dialog_title_delete_all">Deletar todas as tarefas?</string>
+    <string name="label_dialog_message_delete_all">Deseja deletar permanentemente todas as tarefas?</string>
+    <string name="label_toast_all_deleted">Todas as tarefas foram deletadas</string>
+    <string name="label_dialog_title_delete">Deletar tarefa?</string>
+    <string name="label_dialog_message_delete">Deseja deletar permanentemente a tarefa?</string>
+    <string name="label_no">Não</string>
+    <string name="label_yes">Sim</string>
+    <string name="label_toast_task_deleted">Tarefa Deletada</string>
 </resources>

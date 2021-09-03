@@ -19,8 +19,13 @@
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/activity_add_task.xml" value="0.4212962962962963" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/activity_main.xml" value="0.42239583333333336" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/empty_state.xml" value="0.3875" />
-        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/item_task.xml" value="0.40555555555555556" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/fragment_add.xml" value="0.5260416666666666" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/fragment_list.xml" value="0.5260416666666666" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/fragment_update.xml" value="0.46145833333333336" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/item_task.xml" value="0.4583333333333333" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/menu-v26/delete_menu.xml" value="0.5260416666666666" />
+        <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/menu/delete_menu.xml" value="0.4484375" />
         <entry key="..\:/workspace/SantanderMobile/TodoList/app/src/main/res/menu/popup_menu.xml" value="0.5260416666666666" />
       </map>
     </option>

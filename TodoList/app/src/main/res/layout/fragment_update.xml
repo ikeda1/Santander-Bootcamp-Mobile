@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/label_update_task_title"
+        app:navigationIcon="@drawable/ic_nav_bf"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/toolbar_bg"
+        />
+
+    <!-- Margens laterais e central para a caixa de input -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+    <!--  ===================================== -->
+
+    <!-- Input Título da tarefa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_title"
+        style="@style/TextInputLayout.roundedCorner"
+        android:hint="@string/label_title_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_update"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textCursorDrawable="@drawable/custom_cursor_color"
+            android:textColorHighlight="#a9a9a9"
+            tools:text="@string/label_title_example" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  ===================================== -->
+
+    <!-- Input Descrição da tarefa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_description"
+        style="@style/TextInputLayout.roundedCorner"
+        android:theme="@style/EditTextThemeOverlay"
+        android:hint="@string/label_description_hint"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:maxHeight="350dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/til_title"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxHeight="350dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:textCursorDrawable="@drawable/custom_cursor_color"
+            android:textColorHighlight="#a9a9a9"
+            tools:text="@string/label_description_example" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  ===================================== -->
+
+    <!-- Input Data da tarefa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_date"
+        style="@style/TextInputLayout.roundedCorner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_date_hint"
+        android:textColorHint="@color/gray_ish"
+        app:startIconDrawable="@drawable/ic_calendar"
+        app:startIconTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/til_description"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toStartOf="@id/til_time"
+        app:boxStrokeColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:focusable="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  ===================================== -->
+
+    <!-- Input Hora da tarefa -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_time"
+        style="@style/TextInputLayout.roundedCorner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_hour_hint"
+        android:textColorHint="@color/gray_ish"
+        app:startIconDrawable="@drawable/ic_clock"
+        app:startIconTint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/til_date"
+        app:layout_constraintStart_toEndOf="@id/til_date"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:boxStrokeColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:focusable="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  ===================================== -->
+
+    <!-- Botão Cancelar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_cancel"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/til_time"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintStart_toStartOf="@id/guide_start"/>
+
+    <!-- Botão Criar Tarefa -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_task"
+        style="@style/Widget.MaterialComponents.Button"
+        app:cornerRadius="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_update_task_btn"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintTop_toBottomOf="@id/btn_update_cancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
