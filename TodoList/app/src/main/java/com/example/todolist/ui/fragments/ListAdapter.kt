@@ -31,6 +31,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListAdapterViewHolder>() {
         holder.itemView.tv_title.setText(task.title).toString()
         holder.itemView.tv_date.setText(date).toString()
         holder.itemView.tv_description.setText(task.description).toString()
+        holder.itemView.edit_btn.setOnClickListener {
+            val actionUpdate = ListFragmentDirections.listFragmentToUpdateFragment(task)
+            holder.itemView.findNavController().navigate(actionUpdate)
+        }
     }
 
 

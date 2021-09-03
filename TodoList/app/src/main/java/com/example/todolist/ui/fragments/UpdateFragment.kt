@@ -49,7 +49,7 @@ class UpdateFragment : Fragment(){
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.action_delete -> {
+            R.id.menu_delete_item -> {
                 deleteUser()
             }
         }
