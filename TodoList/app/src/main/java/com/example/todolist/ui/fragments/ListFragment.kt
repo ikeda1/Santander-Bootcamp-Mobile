@@ -65,13 +65,6 @@ class ListFragment : Fragment() {
             R.id.menu_delete_item -> {
                 deleteAll()
             }
-            R.id.missile_item -> {
-                Toast.makeText(
-                    requireContext(),
-                    "FIRE ZE MISSILES!",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
         }
         return super.onOptionsItemSelected(item)
     }

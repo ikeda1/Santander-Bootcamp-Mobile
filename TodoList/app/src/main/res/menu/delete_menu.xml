@@ -2,11 +2,6 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/missile_item"
-        android:icon="@drawable/ic_rocket_white"
-        android:title="missile"
-        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/menu_delete_item"

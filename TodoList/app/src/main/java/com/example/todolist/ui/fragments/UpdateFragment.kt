@@ -79,7 +79,7 @@ class UpdateFragment : Fragment(){
             timePicker.addOnPositiveButtonClickListener {
                 val minute = if (timePicker.minute in 0..9) "0${timePicker.minute}" else timePicker.minute
                 val hour = if (timePicker.hour in 0..9) "0${timePicker.hour}" else timePicker.hour
-                val time = "$hour:minute"
+                val time = "$hour:$minute"
                 til_time.editText?.setText(time)
             }
             timePicker.show(childFragmentManager, "tag")
